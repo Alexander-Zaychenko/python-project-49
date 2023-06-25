@@ -25,6 +25,7 @@ def main():
         print(
             f"'{answer}' is wrong answer ;(. Correct answer was '{corr_answer}'"
         )
-        right_answers = 0
-
-    print(f"Congratulations, {name}!")
+        print(f"Let's try again, {name}!")
+        break
+    if right_answers == 3:
+        print(f"Congratulations, {name}!")
