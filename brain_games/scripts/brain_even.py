@@ -11,20 +11,20 @@ def main():
     while right_answers < 3:
         question = randint(1, 100)
 
-        right_answer = 'yes'
+        corr_answer = 'yes'
         if question % 2:
-            right_answer = 'no'
+            corr_answer = 'no'
 
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
-        if (not question % 2 and answer == right_answer) or\
-                (question % 2 and answer == right_answer):
+        if (not question % 2 and answer == corr_answer) or\
+                (question % 2 and answer == corr_answer):
             print('Correct!')
             right_answers += 1
             continue
         print(
-            f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'"
+            f"'{answer}' is wrong answer ;(. Correct answer was '{corr_answer}'"
         )
         right_answers = 0
 
-    print(f"Congratulations, {name}")
+    print(f"Congratulations, {name}!")
