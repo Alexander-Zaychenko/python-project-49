@@ -1,22 +1,63 @@
-from random import randint
+from random import randint, choice
+from operator import add, sub, mul
+import prompt
 
 
-def engine(corr_answer, name):
-    import prompt
+def check(answer, correct_answer):
+    return answer == correct_answer
+
+
+def print_question(question):
+    print(f'Question: {question}')
+
+
+def print_correct():
+    print('Correct!')
+
+
+def print_incorrect(answer, correct_answer, name):
+    print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+    print(f"Let's try again, {name}!")
+
+
+def generate_question_even():
+    num = randint(1, 100)
+    even_or_odd_num = 'yes' if not num % 2 else 'no'
+    return num, even_or_odd_num
+
+
+def generate_question_calc():
+    operators = {
+        '+': add,
+        '-': sub,
+        '*': mul,
+    }
+    operand_left = randint(1, 50)
+    operand_right = randint(1, 50)
+    operator = choice(list(operators.keys()))
+    question = f"{operand_left} {operator} {operand_right}"
+    correct_answer = operators[operator](operand_left, operand_right)
+    return question, str(correct_answer)
+
+
+def engine(game, name):
     right_answers = 0
-    while True:
-        question = randint(1, 100)
-        print(f'Question: {question}')
+    wins_for_win = 3
+    while right_answers != 3:
+        question, correct_answer = games[game]()
+        print_question(question)
         answer = prompt.string('Your answer: ')
-        if (not question % 2 and answer == corr_answer) or\
-                (question % 2 and answer == corr_answer):
-            print('Correct!')
+        if check(answer, correct_answer):
+            print_correct()
             right_answers += 1
-            continue
-        print(
-            f"'{answer}' is wrong answer ;(. Correct answer was '{corr_answer}'"
-        )
-        print(f"Let's try again, {name}!")
-        break
-    if right_answers == 3:
-        print(f"Congratulations, {name}!")
+        else:
+            print_incorrect(answer, correct_answer, name)
+            break
+        if right_answers == wins_for_win:
+            print(f"Congratulations, {name}!")
+
+
+games = {
+        'brain-even': generate_question_even,
+        'brain-calc': generate_question_calc,
+    }
