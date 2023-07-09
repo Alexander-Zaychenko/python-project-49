@@ -1,3 +1,4 @@
+from brain_games.cli import welcome_user
 from random import randint, choice
 from operator import add, sub, mul
 import prompt
@@ -40,9 +41,30 @@ def generate_question_calc():
     return question, str(correct_answer)
 
 
-def engine(game, name):
+def generate_question_gcd():
+    first = randint(1, 100)
+    second = randint(1, 100)
+    question = f'{first} {second}'
+    if not first % second:
+        answer = second
+    elif not second % first:
+        answer = first
+    else:
+        while first != 0 and second != 0:
+            if first > second:
+                first = first % second
+            else:
+                second = second % first
+        answer = first + second
+    return question, str(answer)
+
+
+def engine(game):
     right_answers = 0
     wins_for_win = 3
+
+    name = welcome_user()
+    print(rules[game])
     while right_answers != 3:
         question, correct_answer = games[game]()
         print_question(question)
@@ -58,6 +80,13 @@ def engine(game, name):
 
 
 games = {
-        'brain-even': generate_question_even,
-        'brain-calc': generate_question_calc,
-    }
+    'brain-even': generate_question_even,
+    'brain-calc': generate_question_calc,
+    'brain-gcd': generate_question_gcd,
+}
+
+rules = {
+    'brain-even': 'Answer "yes" if the number is even, otherwise answer "no".',
+    'brain-calc': 'What is the result of the expression?',
+    'brain-gcd': 'Find the greatest common divisor of given numbers.'
+}
