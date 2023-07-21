@@ -59,6 +59,16 @@ def generate_question_gcd():
     return question, str(answer)
 
 
+def generate_question_progression():
+    step = randint(1, 4)
+    progression = list(range(1, 50))[step::step]
+    progression = progression[:10]
+    question_index = randint(0, 9)
+    answer = progression[question_index]
+    progression[question_index] = '..'
+    return ' '.join(map(str, progression)), str(answer)
+
+
 def engine(game, rules):
     right_answers = 0
     wins_for_win = 3
@@ -83,5 +93,6 @@ games = {
     'brain-even': generate_question_even,
     'brain-calc': generate_question_calc,
     'brain-gcd': generate_question_gcd,
+    'brain-progression': generate_question_progression,
 }
 
