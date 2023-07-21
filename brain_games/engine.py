@@ -59,12 +59,12 @@ def generate_question_gcd():
     return question, str(answer)
 
 
-def engine(game):
+def engine(game, rules):
     right_answers = 0
     wins_for_win = 3
 
     name = welcome_user()
-    print(rules[game])
+    print(rules)
     while right_answers != 3:
         question, correct_answer = games[game]()
         print_question(question)
@@ -85,8 +85,3 @@ games = {
     'brain-gcd': generate_question_gcd,
 }
 
-rules = {
-    'brain-even': 'Answer "yes" if the number is even, otherwise answer "no".',
-    'brain-calc': 'What is the result of the expression?',
-    'brain-gcd': 'Find the greatest common divisor of given numbers.'
-}

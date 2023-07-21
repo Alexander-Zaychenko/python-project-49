@@ -3,4 +3,5 @@ from ..engine import engine
 
 def main():
     game = 'brain-gcd'
-    engine(game)
+    rules = 'Find the greatest common divisor of given numbers.'
+    engine(game, rules)

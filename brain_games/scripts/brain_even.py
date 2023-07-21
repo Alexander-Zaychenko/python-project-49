@@ -3,4 +3,5 @@ from ..engine import engine
 
 def main():
     game = 'brain-even'
-    engine(game)
+    rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+    engine(game, rules)
