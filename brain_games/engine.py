@@ -69,6 +69,14 @@ def generate_question_progression():
     return ' '.join(map(str, progression)), str(answer)
 
 
+def generate_question_prime():
+    def is_prime(num):
+        return num in [2, 3, 5, 7, 11, 13, 17, 19, 23]
+    question = randint(1, 26)
+    answer = 'yes' if is_prime(question) else 'no'
+    return question, answer
+
+
 def engine(game, rules):
     right_answers = 0
     wins_for_win = 3
@@ -94,5 +102,6 @@ games = {
     'brain-calc': generate_question_calc,
     'brain-gcd': generate_question_gcd,
     'brain-progression': generate_question_progression,
+    'brain-prime': generate_question_prime
 }
 
