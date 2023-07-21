@@ -5,29 +5,35 @@ import prompt
 
 
 def check(answer, correct_answer):
+    """Check similar of user_answer and correct_answer"""
     return answer == correct_answer
 
 
 def print_question(question):
+    """print question"""
     print(f'Question: {question}')
 
 
 def print_correct():
+    """print correct"""
     print('Correct!')
 
 
 def print_incorrect(answer, correct_answer, name):
+    """print incorrect"""
     print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
     print(f"Let's try again, {name}!")
 
 
 def generate_question_even():
+    """generate question for brain-even"""
     num = randint(1, 100)
     even_or_odd_num = 'yes' if not num % 2 else 'no'
     return num, even_or_odd_num
 
 
 def generate_question_calc():
+    """generate question for brain-calc"""
     operators = {
         '+': add,
         '-': sub,
@@ -42,6 +48,7 @@ def generate_question_calc():
 
 
 def generate_question_gcd():
+    """generate question for brain-gcd"""
     first = randint(1, 100)
     second = randint(1, 100)
     question = f'{first} {second}'
@@ -60,6 +67,7 @@ def generate_question_gcd():
 
 
 def generate_question_progression():
+    """generate question for brain-progression"""
     step = randint(1, 4)
     progression = list(range(1, 50))[step::step]
     progression = progression[:10]
@@ -70,6 +78,7 @@ def generate_question_progression():
 
 
 def generate_question_prime():
+    """generate question for brain-prime"""
     def is_prime(num):
         return num in [2, 3, 5, 7, 11, 13, 17, 19, 23]
     question = randint(1, 26)
@@ -78,6 +87,7 @@ def generate_question_prime():
 
 
 def engine(game, rules):
+    """engine of games"""
     right_answers = 0
     wins_for_win = 3
 
