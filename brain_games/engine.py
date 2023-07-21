@@ -21,7 +21,9 @@ def print_correct():
 
 def print_incorrect(answer, correct_answer, name):
     """print incorrect"""
-    print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
+    print(
+        f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'"
+    )
     print(f"Let's try again, {name}!")
 
 
@@ -114,4 +116,3 @@ games = {
     'brain-progression': generate_question_progression,
     'brain-prime': generate_question_prime
 }
-
