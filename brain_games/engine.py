@@ -17,10 +17,9 @@ def print_correct():
     print('Correct!')
 
 
-def print_incorrect(answer, correct_answer, name):
-    print(
-        f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'"
-    )
+def print_incorrect(ans, corr_ans, name):
+    incorrect = f"'{ans}' is wrong answer ;(. Correct answer was '{corr_ans}'"
+    print(incorrect)
     print(f"Let's try again, {name}!")
 
 
