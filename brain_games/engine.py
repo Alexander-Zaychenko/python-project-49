@@ -83,7 +83,7 @@ def engine(game, rules):
         print(question)
         answer = prompt.string('Your answer: ')
         if check(answer, correct_answer):
-            print(correct_answer)
+            print('Correct!')
             right_answers += 1
         else:
             print_incorrect(answer, correct_answer, name)
