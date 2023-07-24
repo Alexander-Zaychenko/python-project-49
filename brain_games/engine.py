@@ -27,8 +27,8 @@ def generate_question_calc():
         '-': sub,
         '*': mul,
     }
-    operand_left = randint(1, 50)
-    operand_right = randint(1, 50)
+    operand_left = randint(1, 20)
+    operand_right = randint(1, 20)
     operator = choice(list(operators.keys()))
     question = f"{operand_left} {operator} {operand_right}"
     correct_answer = operators[operator](operand_left, operand_right)
@@ -80,7 +80,7 @@ def engine(game, rules):
     print(rules)
     while right_answers != 3:
         question, correct_answer = games[game]()
-        print(question)
+        print(f"Question: {question}")
         answer = prompt.string('Your answer: ')
         if check(answer, correct_answer):
             print('Correct!')
