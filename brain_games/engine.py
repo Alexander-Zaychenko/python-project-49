@@ -9,14 +9,6 @@ def check(answer, correct_answer):
     return answer == correct_answer
 
 
-def print_question(question):
-    print(f'Question: {question}')
-
-
-def print_correct():
-    print('Correct!')
-
-
 def print_incorrect(ans, corr_ans, name):
     incorrect = f"'{ans}' is wrong answer ;(. Correct answer was '{corr_ans}'"
     print(incorrect)
@@ -88,10 +80,10 @@ def engine(game, rules):
     print(rules)
     while right_answers != 3:
         question, correct_answer = games[game]()
-        print_question(question)
+        print(question)
         answer = prompt.string('Your answer: ')
         if check(answer, correct_answer):
-            print_correct()
+            print(correct_answer)
             right_answers += 1
         else:
             print_incorrect(answer, correct_answer, name)
