@@ -27,6 +27,12 @@ Now is the last step: choose the game!
 
 ### brain-even
 #### Answer "yes" if the number is even, otherwise answer "no".
+
+#### Running
+```bash
+brain-even
+```
+
 Now let's watch how it's look like.
 
 [![asciicast](https://asciinema.org/a/XZTEyTQxq6JLX8uzQEXvUnpNo.svg)](https://asciinema.org/a/XZTEyTQxq6JLX8uzQEXvUnpNo)
@@ -35,6 +41,12 @@ Now let's watch how it's look like.
 
 ### brain-calc
 #### Can you find out result of the expression?
+
+#### Running
+```bash
+brain-calc
+```
+
 Now let's watch how it's look like.
 
 [![asciicast](https://asciinema.org/a/oiuLndRME2MqExAaTJZSUEtug.svg)](https://asciinema.org/a/oiuLndRME2MqExAaTJZSUEtug)
@@ -43,6 +55,12 @@ Now let's watch how it's look like.
 
 ### brain-gcd
 #### Find out the greatest common divisor of given numbers.
+
+#### Running
+```bash
+brain-gcd
+```
+
 Now let's watch how it's look like.
 
 [![asciicast](https://asciinema.org/a/HYR6lFjsfOzcDno3w5lnqZAbS.svg)](https://asciinema.org/a/HYR6lFjsfOzcDno3w5lnqZAbS)
@@ -51,6 +69,12 @@ Now let's watch how it's look like.
 
 ### brain-progression
 #### Can you find out number which missing in the progression?
+
+#### Running
+```bash
+brain-progression
+```
+
 Now let's watch how it's look like.
 
 [![asciicast](https://asciinema.org/a/TKdx6tJxgHH64jJ2MvOYhtu0H.svg)](https://asciinema.org/a/TKdx6tJxgHH64jJ2MvOYhtu0H)
@@ -59,6 +83,12 @@ Now let's watch how it's look like.
 
 ### brain-prime
 #### Answer "yes" if given number is prime. Otherwise answer "no".
+
+#### Running
+```bash
+brain-prime
+```
+
 Now let's watch how it's look like.
 
 [![asciicast](https://asciinema.org/a/gHBlUeTfY5u1X7A4g0EjTHea6.svg)](https://asciinema.org/a/gHBlUeTfY5u1X7A4g0EjTHea6)
