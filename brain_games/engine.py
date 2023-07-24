@@ -16,7 +16,7 @@ def print_incorrect(ans, corr_ans, name):
 
 
 def generate_question_even():
-    num = randint(1, 100)
+    num = randint(1, 50)
     even_or_odd_num = 'yes' if not num % 2 else 'no'
     return num, even_or_odd_num
 
@@ -36,8 +36,8 @@ def generate_question_calc():
 
 
 def generate_question_gcd():
-    first = randint(1, 100)
-    second = randint(1, 100)
+    first = randint(1, 50)
+    second = randint(1, 50)
     question = f'{first} {second}'
     if not first % second:
         answer = second
