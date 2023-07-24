@@ -41,6 +41,28 @@ Now let's watch how it's look like.
 
 #
 
+### brain-gcd
+#### Find out the greatest common divisor of given numbers.
+Now let's watch how it's look like.
+
+[![asciicast](https://asciinema.org/a/HYR6lFjsfOzcDno3w5lnqZAbS.svg)](https://asciinema.org/a/HYR6lFjsfOzcDno3w5lnqZAbS)
+
+#
+
+### brain-progression
+#### Can you find out number which missing in the progression?
+Now let's watch how it's look like.
+
+[![asciicast](https://asciinema.org/a/TKdx6tJxgHH64jJ2MvOYhtu0H.svg)](https://asciinema.org/a/TKdx6tJxgHH64jJ2MvOYhtu0H)
+
+#
+
+### brain-prime
+#### Answer "yes" if given number is prime. Otherwise answer "no".
+Now let's watch how it's look like.
+
+[![asciicast](https://asciinema.org/a/gHBlUeTfY5u1X7A4g0EjTHea6.svg)](https://asciinema.org/a/gHBlUeTfY5u1X7A4g0EjTHea6)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Alexander-Zaychenko/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Alexander-Zaychenko/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/44cfc8989bdcf61dce37/maintainability)](https://codeclimate.com/github/Alexander-Zaychenko/python-project-49/maintainability)
