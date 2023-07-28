@@ -5,12 +5,14 @@
 #
 #
 
-## Installation
+## Installation for Linux
 
 Open any directory and write this command.
 
 ```bash
 git clone git@github.com:Alexander-Zaychenko/python-project-49.git
+# wait a few seconds
+cd python-project-49
 ```
 
 Nice! You downloaded project. Now open project in any editor and write this one command in cli.
